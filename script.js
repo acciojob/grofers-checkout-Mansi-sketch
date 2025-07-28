@@ -4,7 +4,25 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-  
+	let total = 0;
+	let totalPrice = document.querySelectorAll('.price');
+	totalPrice.forEach(p => {
+		let value = parseFloat(p.textContent);
+		if(!isNaN(value)){
+			total += value;
+		}
+	});
+	let totalrow = document.createElement('tr');
+	let totalcells = document.createElement('td');
+	totalcells.setAttribute('colspan','2');
+	totalcells.style.fontWeight='bold';
+	totalcells.style.textAlign='right';
+	totalcells.textContent = `RS ${total}`;
+
+	totalrow.appendChild(totalcells);
+
+	let table = document.querySelector('table');
+	table.appendChild('totalrow');
 };
 
 getSumBtn.addEventListener("click", getSum);
