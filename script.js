@@ -11,18 +11,24 @@ const getSum = () => {
 		if(!isNaN(value)){
 			total += value;
 		}
+        
 	});
+    console.log(total);
 	let totalrow = document.createElement('tr');
 	let totalcells = document.createElement('td');
 	totalcells.setAttribute('colspan','2');
 	totalcells.style.fontWeight='bold';
 	totalcells.style.textAlign='right';
 	totalcells.textContent = `RS ${total}`;
+    //console.log(totalcells.textContent = `Total = RS ${total}`);
 
 	totalrow.appendChild(totalcells);
+    //console.log(totalrow.appendChild(totalcells));
 
 	let table = document.querySelector('table');
-	table.appendChild('totalrow');
+    //console.log(table);
+	table.appendChild(totalrow);
+    //console.log(table.appendChild(totalrow));
 };
 
 getSumBtn.addEventListener("click", getSum);
