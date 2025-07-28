@@ -16,10 +16,10 @@ const getSum = () => {
     console.log(total);
 	let totalrow = document.createElement('tr');
 	let totalcells = document.createElement('td');
-	totalcells.setAttribute('colspan','2');
+	totalcells.setAttribute("id", "ans");
 	totalcells.style.fontWeight='bold';
 	totalcells.style.textAlign='right';
-	totalcells.textContent = `RS ${total}`;
+	totalcells.textContent = `Total = RS ${total}`;
     //console.log(totalcells.textContent = `Total = RS ${total}`);
 
 	totalrow.appendChild(totalcells);
